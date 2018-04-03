@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View Student by NPM</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	 	<link th:href="@{/main.css}" rel="stylesheet"/>
+    </head>
+    <body>
+    <div th:replace="fragments/fragment :: header"></div>
+    <table>
+    	<tr>
+    		<td><h3>NPM</h3></td>
+    		<td><h3 th:text="': '+${student.npm}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Nama</h3></td>
+    		<td><h3 th:text="': '+${student.nama}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Tempat/Tanggal Lahir</h3></td>
+    		<td><h3 th:text="': '+${student.tempat_lahir}+', '+${student.tanggal_lahir}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Jenis Kelamin</h3></td>
+    		<td><h3 th:text="': '+(${student.jenis_kelamin==0}) ? ': Laki-Laki' : ': Perempuan'">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Agama</h3></td>
+    		<td><h3 th:text="': '+${student.agama}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Golongan Darah</h3></td>
+    		<td><h3 th:text="': '+${student.golongan_darah}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Tahun Masuk</h3></td>
+    		<td><h3 th:text="': '+${student.tahun_masuk}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Jalur Masuk</h3></td>
+    		<td><h3 th:text="': '+${student.jalur_masuk}">Student NPM</h3></td>
+    	</tr>
+    	<tr>
+    		<td><h3>Status</h3></td>
+    		<td><h3 th:text="': '+${student.status}">Student NPM</h3></td>
+    	</tr>
+    </table>
+    <div th:replace="fragments/fragment :: footer"></div>
+    </body>
+</html>
+

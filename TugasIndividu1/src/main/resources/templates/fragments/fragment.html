@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Fragment</title>
+	</head>
+	<body>
+		<div th:fragment="header">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	 			<a class="navbar-brand" href="#">Navbar</a>
+	 			<button class="navbar-toggler" type="button" data-toggle="collapse"
+					 data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false"
+					 aria-label="Toggle navigation">
+					 <span class="navbar-toggler-icon"></span>
+	 			</button>
+ 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		 			<ul class="navbar-nav mr-auto">
+			 			<li class="nav-item">
+			 				<a class="nav-link" href="/">Home</a>
+			 			</li>
+			 			<li class="nav-item">
+			 				<a class="nav-link" href="/student/add">Tambah Mahasiswa</a>
+			 			</li>
+			 			<li class="nav-item">
+			 				<a class="nav-link" href="#">Kelulusan Mahasiswa</a>
+			 			</li>
+			 			<li class="nav-item">
+			 				<a class="nav-link" href="#">Cari Mahasiswa</a>
+			 			</li>
+		 			</ul>
+		 			<form action="/student/view" method="get">
+						 <input class="ts-form-search" type="text" placeholder="Search" aria-label="Search" name="npm" />
+		 				<button class="btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		 			</form>
+ 				</div>
+ 			</nav>
+		</div>
+		
+		<div th:fragment="footer">
+			
+				
+			</div>
+	</body>
+</html>
